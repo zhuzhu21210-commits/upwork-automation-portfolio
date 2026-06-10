@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zapier Trello to Google Calendar Workflow - Herry Fu</title>
+  <meta name="description" content="Focused Zapier workflow sample for Trello to Google Calendar automation with Gmail, Drive, and Xero expansion notes.">
+  <style>
+    :root {
+      --ink: #17262b;
+      --muted: #526367;
+      --line: #dbe5e1;
+      --paper: #f7faf9;
+      --panel: #ffffff;
+      --green: #14a800;
+      --blue: #2457a6;
+      --dark: #183642;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 40px 20px 34px;
+    }
+
+    main,
+    .header-inner {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 0;
+      color: #dce9e5;
+      font-size: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      color: white;
+      background: var(--green);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .secondary {
+      color: var(--blue);
+      background: white;
+      border: 1px solid var(--blue);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .card p,
+    li,
+    td {
+      color: var(--muted);
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--ink);
+      background: #edf4f2;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    footer {
+      padding: 28px 20px 44px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .grid,
+      .two {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Zapier Trello to Google Calendar Workflow</h1>
+      <p class="subtitle">A focused first milestone for teams that want Trello cards to become reliable Google Calendar events, with clear handoff notes before expanding into Gmail, Drive, or Xero steps.</p>
+      <div class="actions">
+        <a class="cta" href="mailto:zhuzhu21210@gmail.com?subject=Zapier%20workflow%20automation">Email Herry</a>
+        <a class="cta secondary" href="https://github.com/zhuzhu21210-commits/upwork-automation-portfolio/tree/main/zapier-trello-calendar-workflow">View sample files</a>
+        <a class="cta secondary" href="index.html">Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>First Milestone</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Build</h3>
+          <p class="price">$250-$300</p>
+          <p>One active Zap or multi-step Zap that creates Google Calendar events from Trello card data.</p>
+        </article>
+        <article class="card">
+          <h3>Document</h3>
+          <p>Field mapping, trigger rules, test cases, and handoff notes so the team can adjust simple fields later.</p>
+        </article>
+        <article class="card">
+          <h3>Expand Later</h3>
+          <p>Gmail notifications, Drive filing, Xero file routing, and multi-board workflows should be separate follow-up milestones.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Example Field Map</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Example Field</th>
+            <th>Calendar Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trello card</td>
+            <td>Card title</td>
+            <td>Event title</td>
+          </tr>
+          <tr>
+            <td>Trello card</td>
+            <td>Due date</td>
+            <td>Event start time</td>
+          </tr>
+          <tr>
+            <td>Trello card</td>
+            <td>Description and URL</td>
+            <td>Event description with context link</td>
+          </tr>
+          <tr>
+            <td>Trello label</td>
+            <td>Meeting, delivery, or follow-up</td>
+            <td>Event note or routing rule</td>
+          </tr>
+          <tr>
+            <td>Zapier error path</td>
+            <td>Missing due date</td>
+            <td>Manual review row or notification</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Questions I Confirm First</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Trigger Rules</h3>
+          <ul>
+            <li>Run when a card is created, moved to a list, or assigned a label?</li>
+            <li>Update existing events when Trello cards change?</li>
+            <li>Which timezone should be used for calendar events?</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Error Handling</h3>
+          <ul>
+            <li>Skip cards without due dates or log them for review?</li>
+            <li>Email a summary of failed cards or store it in Google Sheets?</li>
+            <li>Handle Xero and Drive files now or in a second workflow?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Delivery</h2>
+      <p>The first milestone should end with one working automation, test examples, clear assumptions, and concise handoff notes. This keeps the project useful quickly and avoids turning a small Zapier build into an unbounded operations rebuild.</p>
+      <div class="actions">
+        <a class="cta" href="https://www.upwork.com/freelancers/~01d3a23018b9112c8d">Contact on Upwork</a>
+        <a class="cta secondary" href="hire.html">View fixed-scope packages</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Herry Fu - Automation Portfolio
+  </footer>
+</body>
+</html>

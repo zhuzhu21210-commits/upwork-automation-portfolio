@@ -1,0 +1,7 @@
+source_app,source_field,example_value,target_app,target_field,notes
+Trello,card_title,Client onboarding kickoff,Google Calendar,event_title,Use the card title as the event title
+Trello,due_date,2026-06-15 10:00,Google Calendar,start_time,Confirm timezone before turning on the Zap
+Trello,description,Prepare agenda and asset folder,Google Calendar,description,Include useful card notes
+Trello,card_url,https://trello.com/c/example,Google Calendar,description_link,Add the card link for context
+Trello,label,Client meeting,Google Calendar,event_note,Optional label text in event description
+Zapier,error_reason,Missing due date,Google Sheets,error_log,Log cards that need manual review

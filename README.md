@@ -93,10 +93,29 @@ Best-fit client projects:
 - stock increase/decrease form and searchable report
 - first milestone before a larger inventory app
 
+### 7. Zapier Trello to Google Calendar Workflow
+
+Folder: `zapier-trello-calendar-workflow`
+
+Live page: https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/zapier-trello-calendar-workflow.html
+
+Shows a focused first milestone for turning Trello cards into Google Calendar
+events with field mapping, error-handling notes, and later Gmail, Drive, or
+Xero expansion paths.
+
+Best-fit client projects:
+
+- Zapier workflow setup
+- Trello to Google Calendar automation
+- Gmail or Google Drive handoff steps
+- first milestone before wider operations automation
+
 ## Targeted Landing Pages
 
 - `$300` inventory / Excel automation prototype:
   https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/inventory-prototype.html
+- Zapier Trello to Google Calendar workflow:
+  https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/zapier-trello-calendar-workflow.html
 - Sample input pack for the inventory prototype:
   https://github.com/zhuzhu21210-commits/upwork-automation-portfolio/tree/main/inventory-prototype-sample-pack
 
