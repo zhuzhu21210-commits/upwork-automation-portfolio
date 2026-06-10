@@ -3,6 +3,10 @@
 Small, practical work samples for Upwork clients who need Python automation,
 public web data extraction, CSV cleanup, and AI-assisted workflow design.
 
+## Portfolio Preview
+
+![Public Website Data to CSV Scraper](assets/public-website-data-to-csv-thumbnail.png)
+
 ## Samples
 
 ### 1. Public Website Data to CSV Scraper
@@ -50,3 +54,6 @@ For paid projects, I normally deliver:
 - clear assumptions and limitations
 - a small test sample before completing the full run when possible
 
+## License
+
+MIT License. See `LICENSE`.

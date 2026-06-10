@@ -31,6 +31,10 @@ Wrote 30 rows to quotes_sample.csv
 - `quote`
 - `author`
 
+## Example Output
+
+The repository includes `quotes_sample.csv` as a small example output.
+
 ## Client Use Cases
 
 - public directory listings to CSV
@@ -42,4 +46,3 @@ Wrote 30 rows to quotes_sample.csv
 
 This sample avoids login-protected sites, CAPTCHA bypass, private data, and
 terms-of-service circumvention.
-
