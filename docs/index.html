@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Herry Fu - Automation Portfolio</title>
+  <meta name="description" content="Python automation, public web data extraction, CSV cleanup, and AI workflow portfolio samples by Herry Fu.">
+  <style>
+    :root {
+      --ink: #17262b;
+      --muted: #526367;
+      --line: #dbe5e1;
+      --paper: #f7faf9;
+      --panel: #ffffff;
+      --green: #14a800;
+      --blue: #2457a6;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    header {
+      background: #183642;
+      color: white;
+      padding: 44px 20px 38px;
+    }
+
+    main,
+    .header-inner {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: #dce9e5;
+      font-size: 18px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .badge {
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      padding: 5px 11px;
+      color: white;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .card p,
+    li {
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    .preview {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .preview img {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      display: block;
+    }
+
+    .price {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .cta {
+      display: inline-block;
+      color: white;
+      background: var(--green);
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 28px 20px 44px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .grid,
+      .two,
+      .preview {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Python Automation, CSV Cleanup, and AI Workflow Samples</h1>
+      <p class="subtitle">Small practical projects for clients who need repeatable scripts, clean spreadsheet outputs, public data extraction, or safe AI-assisted workflows.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">CSV / Excel</span>
+        <span class="badge">Web Scraping</span>
+        <span class="badge">Gmail Workflows</span>
+        <span class="badge">OpenAI / ChatGPT</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="preview">
+      <div>
+        <h2>Featured Sample: Public Website Data to CSV</h2>
+        <p>This sample shows a lightweight Python workflow that extracts public webpage records, cleans the data, and exports structured rows into a CSV file.</p>
+        <p>It is designed for fixed-scope jobs where the final output should be easy to review in Excel or Google Sheets.</p>
+        <p><a class="cta" href="../public-site-to-csv-scraper/">View sample files</a></p>
+      </div>
+      <img src="../assets/public-website-data-to-csv-thumbnail.png" alt="Public website data to CSV scraper preview">
+    </section>
+
+    <section>
+      <h2>Services</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Public Data to CSV</h3>
+          <p>Collect public records, listings, or page data into a clean spreadsheet.</p>
+          <p class="price">$80-$250 starter scope</p>
+        </article>
+        <article class="card">
+          <h3>Spreadsheet Cleanup</h3>
+          <p>Merge, clean, deduplicate, normalize, and summarize CSV or Excel files.</p>
+          <p class="price">$50-$150 starter scope</p>
+        </article>
+        <article class="card">
+          <h3>AI Workflow Prototype</h3>
+          <p>Classify emails or documents, create review queues, and generate summaries.</p>
+          <p class="price">$150-$300 starter scope</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Delivery Style</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Clear Output</h3>
+          <ul>
+            <li>CSV, Excel, JSON, or HTML output</li>
+            <li>Source code or workflow instructions</li>
+            <li>Short setup and rerun notes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Safe Scope</h3>
+          <ul>
+            <li>Small test sample before full run</li>
+            <li>No CAPTCHA bypass or private-data scraping</li>
+            <li>Human review for AI-generated drafts or classifications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project Samples</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Public Site to CSV Scraper</h3>
+          <p>Standard-library Python script that fetches public pages, parses quote records, and writes a CSV output.</p>
+        </article>
+        <article class="card">
+          <h3>AI Email Triage Workflow</h3>
+          <p>Workflow outline for classifying inbox messages into action buckets and producing safe reviewable summaries.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Best First Project</h2>
+      <p>Send a sample input, the desired output format, and any deadline. A good first milestone is usually a small repeatable script or one clean spreadsheet output.</p>
+      <p class="note">This portfolio is intended for Upwork proposals and small fixed-scope automation projects.</p>
+    </section>
+  </main>
+
+  <footer>
+    Herry Fu · Automation Portfolio
+  </footer>
+</body>
+</html>
+
