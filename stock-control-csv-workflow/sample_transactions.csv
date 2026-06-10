@@ -1,0 +1,6 @@
+date,sku,transaction_type,quantity,note
+2026-06-09,SKU-1001,sale,6,online order batch
+2026-06-09,SKU-1002,sale,4,retail pickup
+2026-06-09,SKU-1003,restock,12,supplier delivery
+2026-06-10,SKU-1004,sale,1,urgent hardware order
+2026-06-10,SKU-1005,sale,35,warehouse dispatch

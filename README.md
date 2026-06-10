@@ -61,6 +61,21 @@ Best-fit client projects:
 - filter records by keywords, location, budget, or tags
 - build a first milestone before adding scheduling or alerts
 
+### 5. Stock Control CSV Workflow
+
+Folder: `stock-control-csv-workflow`
+
+Shows a small inventory workflow that reads stock and transaction CSV files,
+applies sales/restock changes, flags low-stock products, and exports a clean
+stock report.
+
+Best-fit client projects:
+
+- stock control spreadsheet cleanup
+- CSV import/export workflow
+- inventory reorder reports
+- first milestone before a full inventory app or dashboard
+
 ## Service Scope
 
 I prefer small, clear projects where the result is measurable:

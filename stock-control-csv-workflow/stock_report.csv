@@ -1,0 +1,6 @@
+sku,product_name,category,stock_on_hand,reorder_level,unit_cost,stock_value,status,recommended_action
+SKU-1001,USB-C Cable,Accessories,36,20,3.50,126.00,OK,Monitor
+SKU-1002,Wireless Mouse,Accessories,10,15,8.25,82.50,Low stock,Reorder
+SKU-1003,Notebook Stand,Office,38,10,12.00,456.00,OK,Monitor
+SKU-1004,Label Printer,Hardware,2,5,72.50,145.00,Low stock,Reorder
+SKU-1005,Shipping Labels,Consumables,85,50,0.08,6.80,OK,Monitor
