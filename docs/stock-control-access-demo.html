@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access-Style Stock Control Demo - Herry Fu</title>
+  <meta name="description" content="Single-user stock control interface demo with inventory movement forms and searchable stock reports.">
+  <style>
+    :root {
+      --ink: #16262b;
+      --muted: #5c6c70;
+      --line: #d7e2df;
+      --paper: #f5f8f7;
+      --panel: #ffffff;
+      --dark: #183642;
+      --green: #14a800;
+      --blue: #2457a6;
+      --warn: #b75d00;
+      --bad: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 28px 20px;
+    }
+
+    main,
+    .inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 34px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      color: #dce9e5;
+      margin-bottom: 0;
+    }
+
+    .toolbar {
+      background: #eaf1ef;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+    }
+
+    .toolbar .inner {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button,
+    .link-button {
+      border: 1px solid #b8c8c4;
+      background: white;
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 8px 11px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button.primary,
+    .link-button.primary {
+      background: var(--green);
+      border-color: var(--green);
+      color: white;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 18px;
+      padding: 22px 0 34px;
+    }
+
+    .nav,
+    .panel,
+    .metric,
+    .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .nav {
+      padding: 14px;
+      align-self: start;
+    }
+
+    .nav a {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 5px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .nav a.active {
+      color: white;
+      background: var(--dark);
+    }
+
+    .content {
+      display: grid;
+      gap: 16px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 14px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      margin-top: 4px;
+    }
+
+    .panel {
+      padding: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #b8c8c4;
+      border-radius: 5px;
+      padding: 8px;
+      color: var(--ink);
+      background: white;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 38px;
+      resize: vertical;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr 0.9fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .table-wrap {
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 820px;
+      background: white;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #edf4f2;
+      font-size: 13px;
+      color: #35484d;
+    }
+
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .ok {
+      color: #0f6b20;
+      background: #e4f6e7;
+    }
+
+    .low {
+      color: var(--warn);
+      background: #fff2df;
+    }
+
+    .negative {
+      color: var(--bad);
+      background: #ffe8e6;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 10px 0 0;
+    }
+
+    @media (max-width: 900px) {
+      .layout,
+      .metrics,
+      .form-grid,
+      .filters {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <h1>Access-Style Stock Control Demo</h1>
+      <p class="subtitle">A single-user inventory workflow mockup with stock movement entry, searchable reports, stock value, and negative-stock visibility.</p>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="inner">
+      <a class="link-button" href="index.html">Portfolio</a>
+      <a class="link-button" href="https://github.com/zhuzhu21210-commits/upwork-automation-portfolio/tree/main/stock-control-access-demo">View files</a>
+      <a class="link-button primary" href="mailto:zhuzhu21210@gmail.com?subject=Stock%20control%20program">Discuss stock control project</a>
+    </div>
+  </div>
+
+  <main>
+    <div class="layout">
+      <nav class="nav" aria-label="Demo sections">
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#movement">Stock Movement</a>
+        <a href="#reports">Reports</a>
+      </nav>
+
+      <div class="content">
+        <section class="metrics" id="dashboard">
+          <div class="metric">
+            <span>Total items</span>
+            <strong id="totalItems">0</strong>
+          </div>
+          <div class="metric">
+            <span>Total stock value</span>
+            <strong id="totalValue">$0</strong>
+          </div>
+          <div class="metric">
+            <span>Low stock</span>
+            <strong id="lowCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>Minus levels</span>
+            <strong id="negativeCount">0</strong>
+          </div>
+        </section>
+
+        <section class="panel" id="movement">
+          <h2>Record Stock Movement</h2>
+          <div class="form-grid">
+            <div>
+              <label for="item">Item</label>
+              <select id="item"></select>
+            </div>
+            <div>
+              <label for="movement">Movement</label>
+              <select id="movement">
+                <option value="increase">Increase stock</option>
+                <option value="decrease">Decrease stock</option>
+              </select>
+            </div>
+            <div>
+              <label for="quantity">Quantity</label>
+              <input id="quantity" type="number" min="1" value="5">
+            </div>
+            <div>
+              <label for="reason">Reason</label>
+              <select id="reason">
+                <option>Restocked</option>
+                <option>Consumed</option>
+                <option>Stock count</option>
+                <option>Stock correction</option>
+              </select>
+            </div>
+            <div class="wide">
+              <label for="notes">Other information</label>
+              <textarea id="notes">Sample movement for client review</textarea>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="primary" id="applyMovement" type="button">Apply movement</button>
+            <button id="resetDemo" type="button">Reset sample data</button>
+          </div>
+          <p class="note" id="lastAction">No movement recorded yet.</p>
+        </section>
+
+        <section class="panel" id="reports">
+          <h2>Searchable Stock Report</h2>
+          <div class="filters">
+            <div>
+              <label for="search">Search item, supplier, location</label>
+              <input id="search" type="search" placeholder="Try gloves, supplier, store room">
+            </div>
+            <div>
+              <label for="categoryFilter">Category</label>
+              <select id="categoryFilter">
+                <option value="">All categories</option>
+              </select>
+            </div>
+            <div>
+              <label for="statusFilter">Status</label>
+              <select id="statusFilter">
+                <option value="">All statuses</option>
+                <option value="OK">OK</option>
+                <option value="Low">Low</option>
+                <option value="Negative">Negative</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Subcategory</th>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Unit</th>
+                  <th>Price</th>
+                  <th>Value</th>
+                  <th>Supplier</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="reportBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const seedItems = [
+      { category: 'Kitchen', subcategory: 'Owned', item: 'Blue Gloves', qty: 84, unit: 'single units', price: 0.18, supplier: 'North Supplies', location: 'Store Room A', reorder: 40 },
+      { category: 'Cleaning', subcategory: 'Free Issue', item: 'Sanitizer Powder', qty: 12, unit: 'grams', price: 0.04, supplier: 'Hygiene Co', location: 'Store Room B', reorder: 20 },
+      { category: 'Packaging', subcategory: 'Owned', item: 'Food Bags', qty: 230, unit: 'single units', price: 0.06, supplier: 'PackPro', location: 'Shelf 3', reorder: 100 },
+      { category: 'Bar', subcategory: 'Owned', item: 'Lime Syrup', qty: -3, unit: 'single units', price: 4.5, supplier: 'Drinkline', location: 'Cold Store', reorder: 6 },
+      { category: 'Kitchen', subcategory: 'Owned', item: 'Flour', qty: 1800, unit: 'grams', price: 0.01, supplier: 'North Supplies', location: 'Dry Store', reorder: 1000 }
+    ];
+
+    let items = seedItems.map(item => ({ ...item }));
+
+    const itemSelect = document.getElementById('item');
+    const movementSelect = document.getElementById('movement');
+    const quantityInput = document.getElementById('quantity');
+    const reasonSelect = document.getElementById('reason');
+    const lastAction = document.getElementById('lastAction');
+    const reportBody = document.getElementById('reportBody');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const statusFilter = document.getElementById('statusFilter');
+    const searchInput = document.getElementById('search');
+
+    function statusFor(item) {
+      if (item.qty < 0) return 'Negative';
+      if (item.qty <= item.reorder) return 'Low';
+      return 'OK';
+    }
+
+    function formatMoney(value) {
+      return '$' + value.toFixed(2);
+    }
+
+    function renderOptions() {
+      itemSelect.innerHTML = items.map((item, index) => `<option value="${index}">${item.item}</option>`).join('');
+      const categories = [...new Set(items.map(item => item.category))].sort();
+      categoryFilter.innerHTML = '<option value="">All categories</option>' + categories.map(category => `<option>${category}</option>`).join('');
+    }
+
+    function renderMetrics() {
+      const totalValue = items.reduce((sum, item) => sum + item.qty * item.price, 0);
+      document.getElementById('totalItems').textContent = items.length;
+      document.getElementById('totalValue').textContent = formatMoney(totalValue);
+      document.getElementById('lowCount').textContent = items.filter(item => statusFor(item) === 'Low').length;
+      document.getElementById('negativeCount').textContent = items.filter(item => statusFor(item) === 'Negative').length;
+    }
+
+    function renderReport() {
+      const query = searchInput.value.trim().toLowerCase();
+      const category = categoryFilter.value;
+      const status = statusFilter.value;
+      const rows = items.filter(item => {
+        const text = [item.item, item.supplier, item.location, item.subcategory].join(' ').toLowerCase();
+        return (!query || text.includes(query))
+          && (!category || item.category === category)
+          && (!status || statusFor(item) === status);
+      });
+
+      reportBody.innerHTML = rows.map(item => {
+        const status = statusFor(item);
+        const statusClass = status === 'Negative' ? 'negative' : status === 'Low' ? 'low' : 'ok';
+        return `<tr>
+          <td>${item.category}</td>
+          <td>${item.subcategory}</td>
+          <td>${item.item}</td>
+          <td>${item.qty}</td>
+          <td>${item.unit}</td>
+          <td>${formatMoney(item.price)}</td>
+          <td>${formatMoney(item.qty * item.price)}</td>
+          <td>${item.supplier}</td>
+          <td>${item.location}</td>
+          <td><span class="status ${statusClass}">${status}</span></td>
+        </tr>`;
+      }).join('');
+    }
+
+    function renderAll() {
+      renderMetrics();
+      renderReport();
+    }
+
+    document.getElementById('applyMovement').addEventListener('click', () => {
+      const index = Number(itemSelect.value);
+      const quantity = Math.max(1, Number(quantityInput.value) || 1);
+      const item = items[index];
+      const direction = movementSelect.value === 'increase' ? 1 : -1;
+      item.qty += quantity * direction;
+      lastAction.textContent = `${item.item}: ${movementSelect.value} ${quantity} (${reasonSelect.value})`;
+      renderAll();
+    });
+
+    document.getElementById('resetDemo').addEventListener('click', () => {
+      items = seedItems.map(item => ({ ...item }));
+      lastAction.textContent = 'Sample data reset.';
+      renderOptions();
+      renderAll();
+    });
+
+    [searchInput, categoryFilter, statusFilter].forEach(control => {
+      control.addEventListener('input', renderReport);
+      control.addEventListener('change', renderReport);
+    });
+
+    renderOptions();
+    renderAll();
+  </script>
+</body>
+</html>

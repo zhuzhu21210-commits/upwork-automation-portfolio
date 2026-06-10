@@ -76,6 +76,23 @@ Best-fit client projects:
 - inventory reorder reports
 - first milestone before a full inventory app or dashboard
 
+### 6. Access-Style Stock Control Demo
+
+Folder: `stock-control-access-demo`
+
+Live page: https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/stock-control-access-demo.html
+
+Shows a single-user inventory interface mockup with stock movement entry,
+reason fields, current stock reporting, stock value, searchable filters, and
+minus-level visibility.
+
+Best-fit client projects:
+
+- Microsoft Access-style stock control program
+- single-user stock database
+- stock increase/decrease form and searchable report
+- first milestone before a larger inventory app
+
 ## Service Scope
 
 I prefer small, clear projects where the result is measurable:
