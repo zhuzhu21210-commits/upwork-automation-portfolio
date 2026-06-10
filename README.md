@@ -97,6 +97,8 @@ Best-fit client projects:
 
 - `$300` inventory / Excel automation prototype:
   https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/inventory-prototype.html
+- Sample input pack for the inventory prototype:
+  https://github.com/zhuzhu21210-commits/upwork-automation-portfolio/tree/main/inventory-prototype-sample-pack
 
 ## Service Scope
 

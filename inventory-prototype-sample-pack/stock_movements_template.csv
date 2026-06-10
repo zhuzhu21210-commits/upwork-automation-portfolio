@@ -1,0 +1,6 @@
+date,sku,movement_type,quantity,reason,reference,notes
+2026-06-10,SKU-1001,decrease,10,consumed,JOB-1401,kitchen use
+2026-06-10,SKU-1002,increase,25,restocked,PO-2205,supplier delivery
+2026-06-10,SKU-1003,decrease,40,stock correction,COUNT-0610,count adjustment
+2026-06-10,SKU-1004,decrease,2,consumed,JOB-1402,event usage
+2026-06-10,SKU-1005,increase,500,restocked,PO-2206,bulk delivery

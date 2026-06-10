@@ -1,0 +1,6 @@
+sku,item_name,category,subcategory,supplier,location,quantity_on_hand,unit,unit_cost,reorder_level,notes
+SKU-1001,Blue Nitrile Gloves,Consumables,Owned,North Supplies,Store Room A,84,each,0.18,40,high-turnover item
+SKU-1002,Sanitizer Powder,Cleaning,Free Issue,Hygiene Co,Store Room B,12,grams,0.04,20,review low stock
+SKU-1003,Food Bags,Packaging,Owned,PackPro,Shelf 3,230,each,0.06,100,weekly stock count
+SKU-1004,Lime Syrup,Bar,Owned,Drinkline,Cold Store,-3,each,4.50,6,negative stock needs review
+SKU-1005,Flour,Kitchen,Owned,North Supplies,Dry Store,1800,grams,0.01,1000,batch stock item
