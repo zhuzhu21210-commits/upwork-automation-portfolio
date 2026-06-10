@@ -137,6 +137,13 @@
       font-weight: 700;
     }
 
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
     .cta {
       display: inline-block;
       color: white;
@@ -145,6 +152,12 @@
       padding: 10px 15px;
       border-radius: 6px;
       font-weight: 700;
+    }
+
+    .secondary {
+      color: var(--blue);
+      background: white;
+      border: 1px solid var(--blue);
     }
 
     .note {
@@ -183,6 +196,10 @@
         <span class="badge">Gmail Workflows</span>
         <span class="badge">OpenAI / ChatGPT</span>
       </div>
+      <div class="actions">
+        <a class="cta" href="https://www.upwork.com/freelancers/~01d3a23018b9112c8d">Contact on Upwork</a>
+        <a class="cta secondary" href="https://github.com/zhuzhu21210-commits/upwork-automation-portfolio">View GitHub Repo</a>
+      </div>
     </div>
   </header>
 
@@ -192,7 +209,10 @@
         <h2>Featured Sample: Public Website Data to CSV</h2>
         <p>This sample shows a lightweight Python workflow that extracts public webpage records, cleans the data, and exports structured rows into a CSV file.</p>
         <p>It is designed for fixed-scope jobs where the final output should be easy to review in Excel or Google Sheets.</p>
-        <p><a class="cta" href="../public-site-to-csv-scraper/">View sample files</a></p>
+        <div class="actions">
+          <a class="cta" href="../public-site-to-csv-scraper/">View sample files</a>
+          <a class="cta secondary" href="https://www.upwork.com/freelancers/~01d3a23018b9112c8d">Start a project</a>
+        </div>
       </div>
       <img src="../assets/public-website-data-to-csv-thumbnail.png" alt="Public website data to CSV scraper preview">
     </section>
@@ -214,6 +234,42 @@
           <h3>AI Workflow Prototype</h3>
           <p>Classify emails or documents, create review queues, and generate summaries.</p>
           <p class="price">$150-$300 starter scope</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Fixed-Scope Packages</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Starter Fix</h3>
+          <p>Debug a script, clean a small dataset, or fix a simple workflow.</p>
+          <p class="price">$50-$100</p>
+          <ul>
+            <li>Fixed file or clean output</li>
+            <li>Short explanation</li>
+            <li>Setup or run notes</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Data to CSV</h3>
+          <p>Extract public website data or repeated records into a clean spreadsheet.</p>
+          <p class="price">$100-$150</p>
+          <ul>
+            <li>CSV or Excel output</li>
+            <li>Sample validation</li>
+            <li>Source script when useful</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Automation MVP</h3>
+          <p>Build a small API, AI, document, or workflow automation prototype.</p>
+          <p class="price">$150-$300</p>
+          <ul>
+            <li>Working first version</li>
+            <li>Documented flow</li>
+            <li>Test cases or examples</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -257,6 +313,10 @@
     <section>
       <h2>Best First Project</h2>
       <p>Send a sample input, the desired output format, and any deadline. A good first milestone is usually a small repeatable script or one clean spreadsheet output.</p>
+      <div class="actions">
+        <a class="cta" href="https://www.upwork.com/freelancers/~01d3a23018b9112c8d">Contact on Upwork</a>
+        <a class="cta secondary" href="mailto:zhuzhu21210@gmail.com?subject=Small%20automation%20or%20CSV%20project">Email Herry</a>
+      </div>
       <p class="note">This portfolio is intended for Upwork proposals and small fixed-scope automation projects.</p>
     </section>
   </main>
@@ -266,4 +326,3 @@
   </footer>
 </body>
 </html>
-
