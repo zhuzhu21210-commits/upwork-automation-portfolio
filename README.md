@@ -93,6 +93,11 @@ Best-fit client projects:
 - stock increase/decrease form and searchable report
 - first milestone before a larger inventory app
 
+## Targeted Landing Pages
+
+- `$300` inventory / Excel automation prototype:
+  https://zhuzhu21210-commits.github.io/upwork-automation-portfolio/inventory-prototype.html
+
 ## Service Scope
 
 I prefer small, clear projects where the result is measurable:
