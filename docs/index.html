@@ -100,6 +100,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -298,14 +302,20 @@
 
     <section>
       <h2>Project Samples</h2>
-      <div class="grid two">
+      <div class="grid three">
         <article class="card">
           <h3>Public Site to CSV Scraper</h3>
           <p>Standard-library Python script that fetches public pages, parses quote records, and writes a CSV output.</p>
+          <p><a href="../public-site-to-csv-scraper/">View sample</a></p>
         </article>
         <article class="card">
           <h3>AI Email Triage Workflow</h3>
           <p>Workflow outline for classifying inbox messages into action buckets and producing safe reviewable summaries.</p>
+        </article>
+        <article class="card">
+          <h3>Excel to Gmail Drafts</h3>
+          <p>Spreadsheet-driven workflow that creates personalized Gmail draft previews without sending messages automatically.</p>
+          <p><a href="../excel-gmail-draft-automation/">View sample</a></p>
         </article>
       </div>
     </section>

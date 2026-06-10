@@ -1,0 +1,25 @@
+email,subject,body,status
+maya@example.com,"Great work this week, Maya Chen","Hi Maya Chen,
+
+You reached 124% of your sales target and closed 42 tickets. Great work. Please review the numbers and let me know if anything needs correction.
+
+Best,
+Herry",above_target
+noah@example.com,Weekly performance check-in for Noah Smith,"Hi Noah Smith,
+
+You are currently at 92% of your sales target with 31 tickets closed. Please review the numbers and share any blockers or updates before the final report.
+
+Best,
+Herry",needs_follow_up
+lina@example.com,"Great work this week, Lina Patel","Hi Lina Patel,
+
+You reached 126% of your sales target and closed 57 tickets. Great work. Please review the numbers and let me know if anything needs correction.
+
+Best,
+Herry",above_target
+owen@example.com,Weekly performance check-in for Owen Garcia,"Hi Owen Garcia,
+
+You are currently at 78% of your sales target with 19 tickets closed. Please review the numbers and share any blockers or updates before the final report.
+
+Best,
+Herry",needs_follow_up

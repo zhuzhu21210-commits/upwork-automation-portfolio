@@ -35,6 +35,19 @@ Best-fit client projects:
 - classify leads, urgent messages, invoices, and low-priority emails
 - create safe draft replies that still require human approval
 
+### 3. Excel to Gmail Draft Automation
+
+Folder: `excel-gmail-draft-automation`
+
+Shows a safe spreadsheet-to-email workflow that creates reviewable Gmail draft
+records from CSV rows without sending messages automatically.
+
+Best-fit client projects:
+
+- process Excel or CSV reports into personalized Gmail drafts
+- create reviewable notification workflows
+- keep human approval before any email is sent
+
 ## Service Scope
 
 I prefer small, clear projects where the result is measurable:
