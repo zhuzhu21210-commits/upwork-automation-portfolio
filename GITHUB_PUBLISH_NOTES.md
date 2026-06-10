@@ -58,3 +58,31 @@ If you explicitly confirm that Codex may create a public GitHub repository in
 your logged-in GitHub account, Codex can use Chrome to create the empty repo
 through the GitHub website. After that, Codex can add the remote and push from
 the local repository.
+
+## Current Publish Status
+
+The public GitHub repository has been created:
+
+`https://github.com/zhuzhu21210-commits/upwork-automation-portfolio`
+
+The local remote has been configured:
+
+```powershell
+origin https://github.com/zhuzhu21210-commits/upwork-automation-portfolio.git
+```
+
+The local branch has been renamed to:
+
+`main`
+
+Remaining step:
+
+GitHub push requires local Git authentication. Running `git push -u origin main`
+without credentials currently fails with:
+
+```text
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+```
+
+The helper script at `E:\codexwork\publish_github_portfolio.ps1` can be used
+after GitHub authentication is completed.
