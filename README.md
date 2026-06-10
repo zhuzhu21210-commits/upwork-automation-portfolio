@@ -1,0 +1,52 @@
+# Automation Portfolio Samples
+
+Small, practical work samples for Upwork clients who need Python automation,
+public web data extraction, CSV cleanup, and AI-assisted workflow design.
+
+## Samples
+
+### 1. Public Website Data to CSV Scraper
+
+Folder: `public-site-to-csv-scraper`
+
+Demonstrates a lightweight Python script that collects public webpage records,
+parses fields, and exports clean rows to CSV.
+
+Best-fit client projects:
+
+- scrape public website data into CSV or Excel
+- clean repeated webpage records into a structured spreadsheet
+- build a repeatable script with clear setup notes
+
+### 2. AI Email Triage Workflow
+
+Folder: `ai-email-triage-workflow`
+
+Shows how an inbox workflow can classify messages into action buckets and
+produce a daily summary without sending anything automatically.
+
+Best-fit client projects:
+
+- summarize inbox or support messages
+- classify leads, urgent messages, invoices, and low-priority emails
+- create safe draft replies that still require human approval
+
+## Service Scope
+
+I prefer small, clear projects where the result is measurable:
+
+- a CSV, Excel, or JSON output file
+- a working Python script
+- a documented API or automation workflow
+- a simple internal tool or reviewable AI workflow
+
+## Client-Friendly Delivery
+
+For paid projects, I normally deliver:
+
+- source code or workflow steps
+- output files
+- short setup notes
+- clear assumptions and limitations
+- a small test sample before completing the full run when possible
+
