@@ -48,6 +48,19 @@ Best-fit client projects:
 - create reviewable notification workflows
 - keep human approval before any email is sent
 
+### 4. Automated Job Scraper
+
+Folder: `automated-job-scraper`
+
+Demonstrates a small job-listing parser that extracts structured records from
+public-style HTML, filters by project fit and pay, and exports clean CSV rows.
+
+Best-fit client projects:
+
+- scrape public job or listing pages into CSV
+- filter records by keywords, location, budget, or tags
+- build a first milestone before adding scheduling or alerts
+
 ## Service Scope
 
 I prefer small, clear projects where the result is measurable:

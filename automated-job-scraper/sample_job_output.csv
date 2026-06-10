@@ -1,0 +1,5 @@
+job_id,title,company,location,pay_usd,tags,url
+job-1001,Python CSV Automation Developer,BrightOps Studio,Remote,300,Python; CSV; Automation,https://example.com/jobs/python-csv-automation
+job-1002,Web Scraping to CSV,Northlake Research,United States,180,Web Scraping; Data Extraction; Excel,https://example.com/jobs/web-scraping-csv
+job-1004,Google Sheets to Gmail Draft Workflow,CourseFlow,Remote,250,Google Sheets; Gmail; Automation,https://example.com/jobs/google-sheets-gmail
+job-1005,PDF to Excel Extraction Script,LedgerWorks,Remote,120,Python; PDF; Excel,https://example.com/jobs/pdf-excel-extraction
